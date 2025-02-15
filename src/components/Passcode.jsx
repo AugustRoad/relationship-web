@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Passcode
-const CORRECT_PASSCODE = '0000' 
+const CORRECT_PASSCODE = '0209' 
 
 function Passcode() {
     const [passcode, setPasscode] = useState([])
@@ -16,14 +16,14 @@ function Passcode() {
         if (newPasscode.length === 4) {
           const enteredPasscode = newPasscode.join('')
           if (enteredPasscode === CORRECT_PASSCODE) {
-            setMessage('Yayy!! :)')
+            setMessage('对了!!!')
             setTimeout(() => {
-              setMessage('Redirecting...')
-              navigate("/question");
+              setMessage('加载...')
+              navigate("/Timer");
               
             }, 500)
           } else {
-            setMessage('Incorrect passcode, hint: our anniversary date!')
+            setMessage('不对 :( 小提示：纪念日')
             setTimeout(() => {
               setPasscode([])
               setMessage('')
@@ -41,7 +41,7 @@ function Passcode() {
     <div className="min-h-screen w-full bg-black/60 backdrop-blur-sm text-white flex items-center justify-center overflow-hidden">
         <div className="flex flex-col items-center max-w-full">
             {/* Title */}
-            <h1 className="text-2xl font-light mb-8">Enter Passcode</h1>
+            <h1 className="text-2xl font-light mb-8">输入密码</h1>
 
             {/* Passcode Dots */}
             <div className="flex gap-4 mb-16">
@@ -57,7 +57,7 @@ function Passcode() {
 
             {/* Message */}
             {message && (
-            <div className={`mb-4 -mt-9 text-sm font-bold ${message === 'Yayy!! :)' ? 'text-green-500' : 'text-red-500'}`}>
+            <div className={`mb-4 -mt-9 text-sm font-bold ${message === '对了!!!' ? 'text-green-500' : 'text-red-500'}`}>
                 {message}
             </div>
             )}
@@ -98,7 +98,7 @@ function Passcode() {
             onClick={handleCancel}
             className="text-lg text-white/90 hover:text-white active:text-white/70 transition-colors"
             >
-            Cancel
+            取消
             </button>
           </div>
         </div>

@@ -10,14 +10,16 @@ function Recap() {
     <div className="min-h-screen bg-black/20 flex flex-col items-center justify-center p-4">
     <div className="w-full max-w-sm sm:max-w-md text-center">
       <h1 className="text-2xl sm:text-4xl font-bold mb-8 text-white drop-shadow-lg">
-        Let's recap our time together
+        谢谢宝宝的陪伴
+      </h1>
+      <h1 className="text-2xl sm:text-4xl font-bold mb-8 text-white drop-shadow-lg">
+        情人节快乐！
       </h1>
   
       <div className="flex flex-wrap justify-center gap-10 mb-12">
         {[
-          { Icon: Message, label: 'Messages', path: '/recap/message' },
-          { Icon: Image, label: 'Pictures', path: '/recap/pictures' },
-          { Icon: Music, label: 'Music', path: '/recap/music' },
+          
+          
         ].map(({ Icon, label, path }) => (
           <div key={label} className="flex flex-col items-center">
             <button
@@ -39,16 +41,11 @@ function Recap() {
       <div className="flex justify-between w-full">
         <button
           className="px-4 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm sm:text-base border border-white/50 rounded-lg"
-          onClick={() => navigate('/timer')}
+          onClick={() => navigate('/recap/pictures')}
         >
-          <ArrowLeft />  Previous page
+          <ArrowLeft />  前页
         </button>
-        <button
-          className="px-4 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm sm:text-base border border-white/50 rounded-lg"
-          onClick={() => navigate('/letter')}
-        >
-           Next page <ArrowRight />
-        </button>
+        
       </div>
     </div>
   </div>

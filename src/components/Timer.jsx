@@ -6,7 +6,7 @@ import { ArrowRight } from './icons'
 
 function Timer() {
   // Anniversary date
-  const START_DATE = new Date('2000-01-01')
+  const START_DATE = new Date('2025-02-09T07:40')
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -36,39 +36,39 @@ function Timer() {
   <div className="text-center z-10">
     {/* Title */}
     <h1 className="text-lg sm:text-2xl font-bold mb-8 drop-shadow-lg">
-      We've been together for:
+      咱们在一起:
     </h1>
     
     {/* Countdown */}
     <div className="flex items-center justify-center gap-3 sm:gap-4 text-5xl sm:text-7xl font-bold mb-6">
       <div className="flex flex-col items-center">
         <span className="drop-shadow-lg">{timeLeft.days.toString().padStart(2, '0')}</span>
-        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">Days</span>
+        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">天</span>
       </div>
       <span className="text-4xl sm:text-6xl">:</span>
       <div className="flex flex-col items-center">
         <span className="drop-shadow-lg">{timeLeft.hours.toString().padStart(2, '0')}</span>
-        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">Hours</span>
+        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">小时</span>
       </div>
       <span className="text-4xl sm:text-6xl">:</span>
       <div className="flex flex-col items-center">
         <span className="drop-shadow-lg">{timeLeft.minutes.toString().padStart(2, '0')}</span>
-        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">Minutes</span>
+        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">分钟</span>
       </div>
       <span className="text-4xl sm:text-6xl">:</span>
       <div className="flex flex-col items-center">
         <span className="drop-shadow-lg">{timeLeft.seconds.toString().padStart(2, '0')}</span>
-        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">Seconds</span>
+        <span className="text-sm sm:text-2xl mt-1 sm:mt-2">秒</span>
       </div>
     </div>
-    <p className=' text-lg mb-8 drop-shadow-lg'>{`... and still counting <3` }</p>
+    <p className=' text-lg mb-8 drop-shadow-lg'>{`熬过了三天。还要继续！` }</p>
     {/* Button */}
     <div className="flex justify-center w-full">
       <button 
         className="mt-8 sm:mt-12 px-6 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm sm:text-base border border-white/50 rounded-lg"
-        onClick={() => navigate('/recap')}
+        onClick={() => navigate('/recap/pictures')}
       >
-        Go to next page <ArrowRight/>
+        下页 <ArrowRight/>
       </button>
     </div>
   </div>

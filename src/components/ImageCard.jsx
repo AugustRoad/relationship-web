@@ -2,8 +2,8 @@ import React from 'react';
 
 export const ImageCard = ({ imageUrl, altText = "image", title, description }) => {
     return (
-      <div className="max-w-sm mx-auto overflow-hidden shadow-lg bg-white rounded-lg h-[36rem]">
-        <div className="relative w-full h-[25rem]">
+      <div className="max-w-sm mx-auto overflow-hidden shadow-lg bg-white rounded-lg h-[40rem]">
+        <div className="relative w-full h-[30rem]">
           <img
             src={imageUrl}
             alt={altText}

@@ -1,31 +1,21 @@
 import React from 'react'
-import { aquarium1 } from '../assets'
-import { aurora2 } from '../assets'
+import { aurora, fearfarm, first, together, snowman, scary, leave, aurora2 } from '../assets'
 import Carousel from './Carousel'
 import { ImageCard } from './ImageCard'
-import {ArrowLeft,ArrowRight } from './icons'
+import {ArrowLeft, ArrowRight } from './icons'
 import { useNavigate } from 'react-router-dom'
-import first from '../assets/first.jpg';
-import aurora from '../assets/aurora.jpg';
-import fearfarm from '../assets/fearfarm.jpg';
-import scary from '../assets/scary.jpg';
-import snowman from '../assets/snowman.jpg';
-import leave from '../assets/leave.jpg';
-import together from '../assets/together.jpg';
-import tobe from '../assets/tobe.jpeg';
 
-function Picture() {
+function Pi() {
   const navigate = useNavigate();
 
   const pictures = [
-    { Image: first, title: 'September 12, 2024', description: "第一次在德州见面。要了你的联系方式"},   
-    { Image: aurora, title: 'October 11, 2024', description: "说走就走的旅行。看到了很好看的北极光"},
-    { Image: fearfarm, title: 'October 25, 2024', description: "玩鬼屋。有点太怕小丑了吧"},   
-    { Image: scary, title: 'October 25, 2024', description: "很吓人的一幕"},
-    { Image: snowman, title: 'December 2, 2024', description: "一起堆的雪人和雪玫瑰"},   
-    { Image: leave, title: 'December 16, 2024', description: "要走了 ;-; "},
-    { Image: together, title: 'February 9, 2025', description: "在一起了"},
-    { Image: tobe, title: '以后', description: "以后要加更多！"},
+    { Image: first, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},   
+    { Image: aurora, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},
+    { Image: fearfarm, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},   
+    { Image: scary, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},
+    { Image: snowman, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},   
+    { Image: leave, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},
+    { Image: together, title: 'February 30, 3024', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, possimus!"},
 
   ]
   return (
@@ -41,7 +31,7 @@ function Picture() {
             <ImageCard
               key={index}
               imageUrl={Image}
-              altText="时光"
+              altText="Placeholder image"
               title={title}
               description={description}
             />
@@ -55,13 +45,13 @@ function Picture() {
             >
               <ArrowLeft />  前页
             </button>
-          <button
+            <button
               className="px-4 py-2 flex justify-center items-center bg-white/20 gap-2 hover:bg-white/30 backdrop-blur-sm text-white text-sm sm:text-base border border-white/50 rounded-lg"
               onClick={() => navigate('/Closing')}
-          >
+            >
                 下页 <ArrowRight />
-          </button>
-        </div>
+            </button>
+          </div>
       </div>
     </div>
 
@@ -69,4 +59,4 @@ function Picture() {
   )
 }
 
-export default Picture
+export default Pi
